@@ -1,27 +1,13 @@
 package com.ubn.cryptograhicator.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EncryptionResult {
     private String encryptedText;
-    private String iv;
-
-    public EncryptionResult(String encryptedText, String iv) {
-        this.encryptedText = encryptedText;
-        this.iv = iv;
-    }
-
-    public String getEncryptedText() {
-        return encryptedText;
-    }
-
-    public void setEncryptedText(String encryptedText) {
-        this.encryptedText = encryptedText;
-    }
-
-    public String getIv() {
-        return iv;
-    }
-
-    public void setIv(String iv) {
-        this.iv = iv;
-    }
+    private String secret;
 }
